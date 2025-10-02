@@ -59,3 +59,10 @@ artifacts/
 # Temporary files
 tmp/
 temp/
+
+# Vercel
+.vercel
+*.vercel.json
+
+# Local environment files
+.env*.local

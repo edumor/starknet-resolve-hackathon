@@ -31,26 +31,28 @@ const WalletConnection: React.FC = () => {
       
       <Card sx={{ mb: 3 }}>
         <CardContent>
-          <Typography variant="h5" gutterBottom>
-            Estado de Conexión
-          </Typography>
-          
-          {/* Debug Information */}
-          <Box sx={{ mb: 2, p: 2, bgcolor: 'grey.50', borderRadius: 1 }}>
-            <Typography variant="body2" gutterBottom>
-              <strong>🔍 Debug Info:</strong>
+          <>
+            <Typography variant="h5" gutterBottom>
+              Estado de Conexión
             </Typography>
-            <Typography variant="body2">Status: {status}</Typography>
-            <Typography variant="body2">Conectores encontrados: {connectors.length}</Typography>
-            <Typography variant="body2">Wallet detectada: {walletDetected ? 'Sí' : 'No'}</Typography>
-            <Typography variant="body2">Conectando: {isPending ? 'Sí' : 'No'}</Typography>
-          </Box>
+            
+            {/* Debug Information */}
+            <Box sx={{ mb: 2, p: 2, bgcolor: 'grey.50', borderRadius: 1 }}>
+              <Typography variant="body2" gutterBottom>
+                <strong>🔍 Debug Info:</strong>
+              </Typography>
+              <Typography variant="body2">Status: {status}</Typography>
+              <Typography variant="body2">Conectores encontrados: {connectors.length}</Typography>
+              <Typography variant="body2">Wallet detectada: {walletDetected ? 'Sí' : 'No'}</Typography>
+              <Typography variant="body2">Conectando: {isPending ? 'Sí' : 'No'}</Typography>
+            </Box>
 
-          {error && (
-            <Alert severity="error" sx={{ mb: 2 }}>
-              ❌ Error de conexión: {error instanceof Error ? error.message : 'Error desconocido'}
-            </Alert>
-          )}
+            {error && (
+              <Alert severity="error" sx={{ mb: 2 }}>
+                ❌ Error de conexión: {error instanceof Error ? error.message : 'Error desconocido'}
+              </Alert>
+            )}
+          </>
 
           {isConnected ? (
             <Box>
