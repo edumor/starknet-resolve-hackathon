@@ -1,0 +1,6 @@
+[world]
+name = "StarknetResolve"
+description = "On-chain strategy game for Starknet Re{Solve} Hackathon"
+
+[namespace]
+default = "starknet_resolve"
